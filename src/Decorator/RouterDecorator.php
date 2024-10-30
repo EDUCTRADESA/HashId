@@ -73,7 +73,7 @@ class RouterDecorator implements RouterInterface, WarmableInterface, RequestMatc
     /**
      * @codeCoverageIgnore
      */
-    public function getContext()
+    public function getContext(): RequestContext
     {
         return $this->getRouter()->getContext();
     }
@@ -89,7 +89,7 @@ class RouterDecorator implements RouterInterface, WarmableInterface, RequestMatc
     /**
      * @codeCoverageIgnore
      */
-    public function match(string $pathinfo)
+    public function match(string $pathinfo): array
     {
         return $this->getRouter()->match($pathinfo);
     }
@@ -107,7 +107,7 @@ class RouterDecorator implements RouterInterface, WarmableInterface, RequestMatc
     /**
      * @codeCoverageIgnore
      */
-    public function matchRequest($pathinfo)
+    public function matchRequest($pathinfo): array
     {
         return $this->getRouter()->matchRequest($pathinfo);
     }
